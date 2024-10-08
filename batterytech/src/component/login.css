@@ -1,0 +1,168 @@
+/* src/Login.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrollbars */
+    background: url('https://i.pinimg.com/originals/47/85/10/4785108f82735264283547850415738a.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    animation: fade 10s infinite; /* Animation effect for background image */
+}
+
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body {
+    animation: backgroundAnimation 20s ease infinite; /* Animate background */
+}
+
+
+.login-container {
+    background:antiquewhite; /* Semi-transparent white for better contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    z-index: 1; /* Ensures the container is above the animated background */
+
+    position: relative; /* Ensure the container is positioned above the video */
+    opacity: 0; /* Start with a hidden container for animation */
+    animation: scaleOut 0.8s forwards; /* Scale-in animation */
+}
+
+@keyframes scaleOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Start smaller */
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at full size */
+    }
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 200px; /* Adjust size as needed */
+    animation: scaleInOut 2s infinite ease-in-out; /* Add animation */
+}
+
+@keyframes scaleInOut {
+    0% {
+        transform: scale(1); /* Initial size */
+    }
+    50% {
+        transform: scale(1.1); /* Scaled up size */
+    }
+    100% {
+        transform: scale(1); /* Back to initial size */
+    }
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Darker color for text */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: bold;
+    
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Darker label color */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s, box-shadow 0.3s; /* Smooth transition */
+    background-color: white;
+    color: black;
+}
+input:focus {
+    border: 1px solid #007bff; /* Change border color on focus */
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+}
+
+.loginbtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s; /* Transition for background color and transform */
+    position: relative; /* For stacking context */
+    overflow: hidden; /* For child effects */
+}
+
+.loginbtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.loginbtn:active {
+    transform: translateY(1px); /* Slight push down on click */
+}
+
+/* Add a ripple effect on button click */
+.loginbtn:after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    top: 50%;
+    left: 50%;
+    opacity: 0; /* Start invisible */
+    pointer-events: none; /* Prevent interference with clicks */
+}
+
+.loginbtn:focus {
+    outline: none; /* Prevent outline */
+}
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1; /* Show ripple */
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0; /* Hide ripple */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+.createaccount{
+    text-align: center;
+    margin-top: 10px;
+}

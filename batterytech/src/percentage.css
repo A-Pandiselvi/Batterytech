@@ -1,0 +1,32 @@
+/* App.css */
+
+/* Container for the circular progress bar */
+.circular-progress-bar {
+  position: relative;
+  width: 120px; /* Fixed width for the progress bar container */
+  height: 120px; /* Fixed height for the progress bar container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the percentage label to center it */
+.percentage-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px; /* Adjust the font size */
+  font-weight: bold;
+  color: #4CAF50; /* Matches the progress color */
+  pointer-events: none; /* Ensures label does not interfere with the progress bar */
+}
+
+/* Optional: Adjust the SVG size for responsiveness */
+.circular-progress-bar svg {
+  width: 100%; /* Adjusts the SVG size to fit within the container */
+  height: 100%;
+}
+
+  
+  
