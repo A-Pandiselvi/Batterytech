@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import 'D:/IVW/batterytech/src/App.css';
+import 'C:/Users/pandi/OneDrive/Documents/GitHub/Batterytech/batterytech/src/App.css';
 
 const CircularProgressBar = ({ percentage }) => {
   const [animatedPercentage, setAnimatedPercentage] = useState(0);

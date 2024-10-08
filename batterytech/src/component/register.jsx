@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'D:/IVW/batterytech/src/component/login.css'; // Make sure the path is correct
+import 'C:/Users/pandi/OneDrive/Documents/GitHub/Batterytech/batterytech/src/component/login.css'; 
 import { Link } from 'react-router-dom';
 
 const Register = () => {

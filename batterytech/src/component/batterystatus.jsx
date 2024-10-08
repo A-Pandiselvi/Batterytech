@@ -1,6 +1,6 @@
 import React from 'react';
 // Import your CSS file
-import 'D:/IVW/batterytech/src/App.css'
+import 'C:/Users/pandi/OneDrive/Documents/GitHub/Batterytech/batterytech/src/App.css'
 import CircularProgressBar from './percentage';
 
 
