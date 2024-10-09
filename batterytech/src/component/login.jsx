@@ -107,8 +107,7 @@ const Login = () => {
                 </div> */}
                 <button type="submit" className="loginbtn">Login</button>
                 <div className='createaccount'>
-    Don't have an account? 
-    <Link to="/register" style={{ color: '#007bff', textDecoration: 'underline' }}>Register</Link>
+    Don't have an account? <Link to="/register" style={{ color: '#007bff', textDecoration: 'underline' }}>Register</Link>
 </div>
             </form>
         </div>
